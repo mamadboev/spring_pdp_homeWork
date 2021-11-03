@@ -64,4 +64,15 @@ public class StudentServiceImpl implements StudentService {
         }
         return "Student topilmadi!";
     }
+
+    @Override
+    public String delete(int id) {
+        for(int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == id) {
+                list.remove(i);
+                return "Student o'chirildi!";
+            }
+        }
+        return "Student topilmadi!";
+    }
 }
